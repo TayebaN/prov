@@ -1,0 +1,40 @@
+#posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.comment {
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #eee;
+}
+
+.post {
+  padding: 20px;
+  margin: 10px;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post:hover {
+  background-color: white;
+}
+
+.post h2 {
+  font-weight: bold;
+  color: gray;
+}
+
+@media (min-width: 768px) {
+  .post {
+    width: calc(25% - 20px); /* Fyra kolumner på desktop */
+  }
+}
+
+@media (max-width: 767px) {
+  .post {
+    width: calc(100% - 20px); /* En kolumn på mobil */
+  }
+}
